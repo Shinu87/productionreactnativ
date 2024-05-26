@@ -27,7 +27,7 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 app.use("/api/v1/auth", require("./routes/userRoutes"));
 app.use("/api/v1/post", require("./routes/postRoutes"));
 app.get("/",(req,res)=>{
-  req.status(200).send({
+  res.status(200).send({
     "success":true,
     "msg":"node server running"
   })})
